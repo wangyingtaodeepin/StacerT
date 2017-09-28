@@ -27,7 +27,8 @@ SOURCES += \
     Utils/file_util.cpp \
     Utils/format_util.cpp \
     Info/cpu_info.cpp \
-    Info/disk_info.cpp
+    Info/disk_info.cpp \
+    Info/memory_info.cpp
 
 HEADERS += \
         stacer-core_global.h \ 
@@ -35,7 +36,8 @@ HEADERS += \
     Utils/file_util.h \
     Utils/format_util.h \
     Info/cpu_info.h \
-    Info/disk_info.h
+    Info/disk_info.h \
+    Info/memory_info.h
 
 unix {
     target.path = /usr/lib
