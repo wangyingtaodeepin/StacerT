@@ -25,13 +25,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     Utils/command_util.cpp \
     Utils/file_util.cpp \
-    Utils/format_util.cpp
+    Utils/format_util.cpp \
+    Info/cpu_info.cpp \
+    Info/disk_info.cpp
 
 HEADERS += \
         stacer-core_global.h \ 
     Utils/command_util.h \
     Utils/file_util.h \
-    Utils/format_util.h
+    Utils/format_util.h \
+    Info/cpu_info.h \
+    Info/disk_info.h
 
 unix {
     target.path = /usr/lib
