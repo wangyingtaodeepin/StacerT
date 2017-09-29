@@ -1,9 +1,11 @@
-#include "app.h"
-#include <QApplication>
+#include "app_widget.h"
+#include <DApplication>
 #include <QStandardPaths>
 #include <QDebug>
 #include <QDir>
 #include <QDateTime>
+
+DWIDGET_USE_NAMESPACE
 
 void messageHandler(QtMsgType type,
                     const QMessageLogContext &context,
@@ -59,16 +61,16 @@ void messageHandler(QtMsgType type,
 
 int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
+    DApplication app(argc, argv);
 
     qApp->setApplicationName("stacer");
     qApp->setApplicationDisplayName("Stacer");
     qApp->setApplicationVersion("1.0.8");
-    qApp->setWindowIcon(QIcon(":/static/logo.png"));
+    // qApp->setWindowIcon(QIcon(":/static/logo.png"));
 
     qInstallMessageHandler(messageHandler);
 
-    App w;
+    AppWidget w;
     w.show();
 
     return app.exec();

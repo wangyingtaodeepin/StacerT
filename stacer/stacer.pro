@@ -11,6 +11,10 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = stacer
 TEMPLATE = app
 
+CONFIG += c++11 link_pkgconfig
+
+PKGCONFIG += dtkwidget
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -25,10 +29,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        app.cpp
+    Pages/Processes/processes_widget.cpp \
+    Pages/Processes/processes_page.cpp \
+    app_widget.cpp
 
 HEADERS += \
-        app.h
+    Pages/Processes/processes_widget.h \
+    Pages/Processes/processes_page.h \
+    app_widget.h
 
 FORMS += \
         app.ui
