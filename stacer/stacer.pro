@@ -31,15 +31,21 @@ SOURCES += \
         main.cpp \
     Pages/Processes/processes_widget.cpp \
     Pages/Processes/processes_page.cpp \
-    app_widget.cpp
+    app_widget.cpp \
+    Managers/info_manager.cpp
 
 HEADERS += \
     Pages/Processes/processes_widget.h \
     Pages/Processes/processes_page.h \
-    app_widget.h
+    app_widget.h \
+    Managers/info_manager.h
 
-FORMS += \
-        app.ui
+FORMS +=
 
 RESOURCES += \
     ./static.qrc
+
+unix:!macx: LIBS += -L$$OUT_PWD/../stacer-core/ -lstacer-core
+
+INCLUDEPATH += $$PWD/../stacer-core
+DEPENDPATH += $$PWD/../stacer-core
